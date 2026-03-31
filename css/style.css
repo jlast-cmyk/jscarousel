@@ -30,7 +30,51 @@ header h3 {
     flex-direction: column;
     align-items: center;
 }
+.imagecarousel{
+    position: relative;
+}
+.image{
+    display: none;
+}
+.image:first-of-type{
+    display: block;
+}
+.image img{
+    border-radius: 10px;
+}
+.prev, .next{
+    position: absolute;
+    font-size: 200%;
+    color: blue;
+    top: 50%;
+    transition: ;
+    transform: translateY(-50%);
 
+}
+.prev{
+    left: 15px;
+}
+.next{
+    right: 15px;
+}
+.prev:hover,.next:hover{
+    color: ;
+    background-color: ;
+    cursor: ;
+
+}
+
+.dots{
+    display: flex;
+    gap: ;
+    margin: ;
+}
+dot{
+    background-color: ;
+    padding: ;
+    border-radius: ;
+    cursor: pointer;
+}
 
 footer {
     padding: 2em 0;

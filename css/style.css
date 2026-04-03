@@ -45,9 +45,11 @@ header h3 {
 .prev, .next{
     position: absolute;
     font-size: 200%;
-    color: blue;
+    color: rgba(0, 0, 255, 0.486);
     top: 50%;
-    transition: ;
+    padding: .25em;
+    border-radius: 50vh;
+    transition: all ease-in-out 300ms;
     transform: translateY(-50%);
 
 }
@@ -58,22 +60,35 @@ header h3 {
     right: 15px;
 }
 .prev:hover,.next:hover{
-    color: ;
-    background-color: ;
-    cursor: ;
-
+    color: gold;
+    background-color: black;
+    cursor: pointer;
 }
 
 .dots{
     display: flex;
-    gap: ;
-    margin: ;
+    gap: 12px;
+    margin-top: 9px;
+    justify-content: center;
 }
-dot{
-    background-color: ;
-    padding: ;
-    border-radius: ;
-    cursor: pointer;
+.dot{
+    background-color: silver;
+    padding: 6px;
+    /* cursor: pointer; */
+    /* aspect-ratio: 1; */
+    border-radius: 50vh;
+}
+.active{
+    background-color: gold;
+}
+
+.fadeout {
+    animation: fade 2000ms;
+}
+
+@keyframes fade {
+    from {opacity: .2}
+    to {opacity: 1}
 }
 
 footer {
@@ -84,4 +99,31 @@ footer {
     justify-content: center;
     border-top: 3px ridge silver;
     margin-top: 2em;
+}
+
+@media (max-width: 800px){
+    .image{
+        width: 100%;
+        max-width: 100%;
+        display: block;
+        border-radius: 0;
+        overflow-x: hidden;
+    }
+    .header{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 50%;
+    }
+    .dot{
+        padding: 4px;
+        justify-content: center;
+        align-items: center;
+    }
+    .prev, .next{
+        font-size: 350%;
+    }
+
+
 }
